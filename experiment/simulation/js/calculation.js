@@ -12,17 +12,21 @@ var t11=document.getElementById("t11");
 var t12=document.getElementById("t12");
 
 
-function calculate(){
+// function calculate(){
 
-    if(t1.querySelector("input").value=="" || t2.querySelector("input").value=="" || t3.querySelector("input").value=="" || t4.querySelector("input").value=="" || t5.querySelector("input").value=="" || t6.querySelector("input").value=="" || t7.querySelector("input").value=="" || t8.querySelector("input").value=="" || t9.querySelector("input").value=="" || t10.querySelector("input").value=="" || t11.querySelector("input").value=="" || t12.querySelector("input").value=="" ){
-        alert("Please Fill all input fields or Enter valid values in all input fields.");
-    }else{
+//     if(t1.querySelector("input").value=="" || t2.querySelector("input").value=="" || t3.querySelector("input").value=="" || t4.querySelector("input").value=="" || t5.querySelector("input").value=="" || t6.querySelector("input").value=="" || t7.querySelector("input").value=="" || t8.querySelector("input").value=="" || t9.querySelector("input").value=="" || t10.querySelector("input").value=="" || t11.querySelector("input").value=="" || t12.querySelector("input").value=="" ){
+//         alert("Please Fill all input fields or Enter valid values in all input fields.");
+//     }else{
         
-        document.querySelector("#check-button").disabled = false
-    }}
+//         document.querySelector("#check-button").disabled = false
+//     }}
 
-    function checkYourResult(){
-        let flag=true
+function checkYourResult(){
+
+        if(t1.querySelector("input").value=="" || t2.querySelector("input").value=="" || t3.querySelector("input").value=="" || t4.querySelector("input").value=="" || t5.querySelector("input").value=="" || t6.querySelector("input").value=="" || t7.querySelector("input").value=="" || t8.querySelector("input").value=="" || t9.querySelector("input").value=="" || t10.querySelector("input").value=="" || t11.querySelector("input").value=="" || t12.querySelector("input").value=="" ){
+            alert("Please Fill all input fields or Enter valid values in all input fields.");
+        }else{
+            let flag=true
         if(t1.querySelector("input").value!=17.72){
             t1.querySelector("input").style.color="red"
             flag=false
@@ -58,10 +62,10 @@ function calculate(){
             flag=false
         }
         
-        // if(t8.querySelector("input").value!=laminar || Laminar){
-        //     t8.querySelector("input").style.color="red"
-        //     flag=false
-        // }
+        if(t8.querySelector("input").value!="laminar" || t8.querySelector("input").value!="Laminar"){
+            t8.querySelector("input").style.color="red"
+            flag=false
+        }
         
         if(t9.querySelector("input").value!=8.47){
             t9.querySelector("input").style.color="red"
@@ -78,21 +82,24 @@ function calculate(){
             flag=false
         }
 
-        // if(t12.querySelector("input").value!=turbulent || Turbulent){
-        //     t11.querySelector("input").style.color="red"
-        //     flag=false
-        // }
-    }
-
-
+        if(t12.querySelector("input").value!="turbulent" || t12.querySelector("input").value!="Turbulent"){
+            t12.querySelector("input").style.color="red"
+            flag=false
+        }
         if(flag){
         
             for (let i = 0; i < 5; i++) {
-                // document.querySelector(".result-table").style.display = "none"
+                document.querySelector(".result-table").style.display = "none"
                 confetti();
               }
             
             alert("Congratulations! You have successfully completed the experiment.");
         }else{
             document.querySelector(".result-table").style.display = "flex"
-        }     
+        }   
+    }
+}
+         
+
+
+         
