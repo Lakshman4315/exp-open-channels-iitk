@@ -47,38 +47,69 @@ function checkYourResult(){
         //     flag=false
         // }
         
-        if(t5.querySelector("input").value!=1.69){
-            t5.querySelector("input").style.color="red"
-            flag=false
-        }
+        if(t5.querySelector("input").value >1.67
+  && t5.querySelector("input").value<1.71  ){
+    t5.querySelector("input").style.color = "black"
+    flag= true
+}else{
+    t5.querySelector("input").style.color = "red"
+    flag= false
+}
         
-        if(t6.querySelector("input").value!=8.42){
-            t6.querySelector("input").style.color="red"
-            flag=false
-        }
-        
-        if(t7.querySelector("input").value!=1.34){
-            t7.querySelector("input").style.color="red"
-            flag=false
-        }
+
+if(t6.querySelector("input").value >0.083
+&& t6.querySelector("input").value<0.085  ){
+  t6.querySelector("input").style.color = "black"
+  flag= true
+}else{
+  t6.querySelector("input").style.color = "red"
+  flag= false
+}
+       
+
+if(t7.querySelector("input").value >1.33
+&& t7.querySelector("input").value<1.35  ){
+  t7.querySelector("input").style.color = "black"
+  flag= true
+}else{
+  t7.querySelector("input").style.color = "red"
+  flag= false
+}
         
         if(t8.querySelector("input").value!="laminar" || t8.querySelector("input").value!="Laminar"){
             t8.querySelector("input").style.color="red"
             flag=false
         }
         
-        if(t9.querySelector("input").value!=8.47){
-            t9.querySelector("input").style.color="red"
-            flag=false
+        if(t9.querySelector("input").value >8.38
+        && t9.querySelector("input").value<8.55  ){
+          t9.querySelector("input").style.color = "black"
+          flag= true
+        }else{
+          t9.querySelector("input").style.color = "red"
+          flag= false
         }
+
+        if(t10.querySelector("input").value >0.41
+        && t10.querySelector("input").value<0.43  ){
+          t10.querySelector("input").style.color = "black"
+          flag= true
+        }else{
+          t10.querySelector("input").style.color = "red"
+          flag= false
+        }      
         
-        if(t10.querySelector("input").value!=4.21){
-            t10.querySelector("input").style.color="red"
-            flag=false
-        }
-        
-        if(t11.querySelector("input").value!=6.70){
-            t11.querySelector("input").style.color="red"
+        if(t11.querySelector("input").value >6.63
+        && t11.querySelector("input").value<6.77  ){
+          t11.querySelector("input").style.color = "black"
+          flag= true
+        }else{
+          t11.querySelector("input").style.color = "red"
+          flag= false
+        }           
+
+        if(t12.querySelector("input").value!="turbulent" || t12.querySelector("input").value!="Turbulent"){
+            t12.querySelector("input").style.color="red"
             flag=false
         }
 

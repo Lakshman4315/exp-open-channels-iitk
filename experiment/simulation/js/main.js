@@ -5,8 +5,8 @@ var valvePositioning = document.querySelector("#flow-rate-slider")
 var svg=document.getElementById("Layer_1");
 var valvePositioningText = document.getElementById("valve-positioning-text");
 var manometerText = document.getElementById("manometer-text")
-var count=0
 
+export { powerFlag };
 var w2 = document.getElementById("Water_3")
 var w3 = document.getElementById("Water_4")
 var w8 = document.getElementById("Water_6")
