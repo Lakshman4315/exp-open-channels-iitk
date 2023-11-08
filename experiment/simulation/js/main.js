@@ -6,7 +6,7 @@ var svg=document.getElementById("Layer_1");
 var valvePositioningText = document.getElementById("valve-positioning-text");
 var manometerText = document.getElementById("manometer-text")
 
-export { powerFlag };
+var count = 0
 var w2 = document.getElementById("Water_3")
 var w3 = document.getElementById("Water_4")
 var w8 = document.getElementById("Water_6")
