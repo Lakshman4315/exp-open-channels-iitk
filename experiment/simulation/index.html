@@ -3,6 +3,13 @@
 <head>
 	<!-- Add CSS at the head of HTML file -->
     <link rel="stylesheet" href="css/main.css">
+	<style type="text/css" media="print">
+
+		body {
+		  zoom:75%; /*or whatever percentage you need, play around with this number*/
+		}
+		
+		</style>
 		
 </head>
 <body>
@@ -469,7 +476,6 @@
 								  
 							</div>
 
-<!--width 100% tha i m changing to width: 400px; height: 50px;-->
 							<button class="itemx" type="button"  style="width:300px; height:50px; border: solid #080808 3px;" id="purze" disabled="True" onclick="purzeAction()"> CLOSE GATE VALVE </button>
 
 							<div class="page-break"></div>
@@ -507,7 +513,7 @@
                                                 <mo>=</mo>
                                                 <mfrac>
                                                     <mrow>
-                                                    <mn>u</mn>
+                                                    <mn>&#956;</mn>
                                                      </mrow>
                                                     <mi>&#961;</mi>
                                                 </mfrac>
@@ -523,7 +529,7 @@
                                                 <mfrac>
                                                     <mrow>
                                                         <mi>D</mi> <!--  rho-->
-                                                        <mi>v</mi>
+                                                        <mi>V</mi>
                                                        
                                                     </mrow>
                                                     <mi>&nu;</mi> <!-- μ -->
@@ -535,7 +541,7 @@
 										</p>
 										<p style="text-align: center;  font-size:20px; font-weight: bolder; padding: 10px;">
 											<math style="font-weight: bold;" xmlns="http://www.w3.org/1998/Math/MathML">
-                                               Average Velocity of the fluid <mi>v</mi>
+                                               Average Velocity of the fluid <mi>V</mi>
                                                 <mo>=</mo>
                                                 <mfrac>
                                                     <mrow>
@@ -555,7 +561,12 @@
                                                 <mo>=</mo>
                                                 <mfrac>
                                                     <mrow>
-                                                        <mi><sup>V<sub>0</sub></sup></mi> <!--  rho-->
+                                                        <msub>
+															<mi>V</mi>
+															<mrow class="MJX-TeXAtom-ORD">
+															<mi>o</mi>
+															</mrow>
+														</msub>
                                                         
                                                     </mrow>
                                                     <mi>t</mi> <!-- μ -->
@@ -564,19 +575,7 @@
 		
 											
 		
-										</p>
-		
-										<p style="text-align: center;;  font-weight: bolder; padding: 10px;">
-											<math xmlns="http://www.w3.org/1998/Math/MathML" style="  font-size:20px; font-weight: bold;">
-												
-                                             <!--write formula here-->
-
-
-											</math>
-										</p>
-										
-										
-		
+										</p>										
 									</div> 
 		
 		
@@ -586,12 +585,12 @@
 										<p style="text-align: center; line-height: 40px; font-size: 20px;  font-weight: bolder; margin: 10px; padding: 20px;">
 											
                                                 Area of the tank (A) = 0.1 m² <br>
-												Area of the pipe (A) = 0.000201 m² <br>
-                                                Diameter of pipe in meters (D)=0.016 m  <br>
-                                                Length of pipe (L)=1 m <br>
-                                                Kinematic Viscosity (v) = 1.0060E-06 m²/s <br>
-                                                Acceleration due to gravity (g)=9.81 N/m<br>
-											    Density of water=1000 kg/m³<br>
+                                                Diameter of pipe in meters (D) = 0.016 m  <br>
+                                                Length of pipe (L) = 1 m <br>
+                                                Kinematic Viscosity (<math style="font-weight: bold;" xmlns="http://www.w3.org/1998/Math/MathML">
+												 <mi>v</mi></math>) = 1.0060E-06 m²/s <br>
+                                                Acceleration due to gravity (g) = .81 N/m<br>
+											    Density of water = 1000 kg/m³<br>
 										</p>
 										
 									</div> 
@@ -604,40 +603,32 @@
 									</tr>
 									<tr>
 										<th>S.No:</th>
-			<th>Volume of water collected (m<sup>3</sup>)</th>
-			<th>Time (sec)</th>
-			<th>Flow type</th>
+			<th>Volume of water collected V<sub>o</sub><br> (m<sup>3</sup>)</th>
+			<th>Time<br> (sec)</th>
 									</tr>
 									<tr>
 										<td>1.</td>
 										
-										<td>0.3</td>
+										<td>3.00E-04</td>
 										<td id="t1"><input type="number"></td>
-										<td id="t2"><input type="text" disabled="true" value="Laminar"></td>
 									</tr>
 									<tr>
 										<td>2.</td>
-										<td>0.3</td>
+										<td>3.00E-04</td>
 										<td id="t3"><input type="number"></td>
-										<tD id="t4"><input type="text" disabled="true" value="Turbulent"></tD>
 
 										
 									</tr>
 									</tr> 
 								</table>
-   
-
-
-
-
 								<table id="tab1" border="1">
 									<tr>
 										<th colspan="10" style="font-size: 25px; font-weight: bolder; background-color: #634380;color: white;">Calculation Table</th>
 									</tr>
 									<tr>
 										<th>S.No:</th>
-			<th>Discharge(m<sup>3</sup>/s) x 10<sup>-5</sup> </th>
-			<th>Velocity(m/s) </th>
+			<th>Discharge Q x 10<sup>-5</sup> <br> (m<sup>3</sup>/s)</th>
+			<th>Velocity V<br>(m/s) </th>
 			<th>Reynolds No. x 10<sup>3</sup> </th>
 			<th>Flow type</th>
 									</tr>
@@ -666,9 +657,8 @@
 									</tr>
 									<tr>
 										<th>S.No:</th>
-										
-			<th>Discharge(m<sup>3</sup>/s) x 10<sup>-5</sup> </th>
-			<th>Velocity(m/s) </th>
+			<th>Discharge Q x 10<sup>-5</sup> <br> (m<sup>3</sup>/s)</th>
+			<th>Velocity V<br>(m/s) </th>
 			<th>Reynolds No. x 10<sup>3</sup> </th>
 			<th>Flow type</th>
 									</tr>

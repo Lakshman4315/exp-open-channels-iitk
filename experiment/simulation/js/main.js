@@ -72,7 +72,6 @@ function stopAnimation() {
 }
 
 function resetAll(){
-    reset()
     valvePositioningText.textContent = '0'
     valvePositioning.value = 0
 
@@ -293,6 +292,9 @@ function fillTankFront(){
     setTimeout(function() {
         document.getElementById("steps").innerHTML = "Take note of the current time on the timer, and select another valve of valve positioning for further readings."
         valvePositioning.disabled=false
+        if(valvePositioning.value==2){
+            document.getElementById("steps").innerHTML = "Take note of the current time on the timer."
+        }
       }, 3500);
 
 }   
